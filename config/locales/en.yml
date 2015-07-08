@@ -1,2 +1,14 @@
 en:
-  hello: "Hello world"
+  static_page:
+    home: "Home"
+    help: "Help"
+    log_in: "Log in"
+    news: "New"
+    about: "About"
+    about_us: "About us"
+    title: "Book Review System"
+    sign_up: "Sign up now"
+    intro_about: "The Ruby on Rails Tutorial is a project to make a book and screencasts to teach web development with Ruby on Rails"
+    intro_home: "Welcome to the Book Review System"
+    intro_help: "Get help on the Ruby on Rails Tutorial at the Rails Tutorial help page."
+    home_description: "This is the home page for Book Review System."
