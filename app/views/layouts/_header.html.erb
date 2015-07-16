@@ -3,14 +3,14 @@
     <%= link_to t("static_page.title"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("static_page.home"), root_path %></li>
+        <li><%= link_to t("static_page.home"), home_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to t("user.all-book"), books_path %></li>
           <li><%= link_to t("user.all-user"), users_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t "User" %><b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><%= link_to t("user.profile"), current_user %></li>
+              <li><%= link_to t("user.profile"), activities_path(user_id: current_user.id) %></li>
               <li><%= link_to t("user.favorite"), "#" %></li>
               <li><%= link_to t("user.reading"), "#" %></li>
               <li><%= link_to t("user.request"), requests_path %></li>

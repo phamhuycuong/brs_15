@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def after_sign_in_path_for resource
-    current_user.admin? ? admin_root_path : root_path
+    current_user.admin? ? admin_root_path : activities_path(user_id: current_user.id)
   end
 
   def required_admin

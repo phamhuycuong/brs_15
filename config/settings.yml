@@ -59,3 +59,5 @@ following_type: "following"
 follow_type:
   - following
   - followers
+activities:
+  pages: 6

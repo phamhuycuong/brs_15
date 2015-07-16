@@ -15,6 +15,6 @@ class Review < ActiveRecord::Base
   end
 
   def activity_review
-    Activity.create! action: "review|#{self.book.id}|", user_id: self.user.id
+    Activity.create! action: "review|#{self.id}|", user_id: self.user.id
   end
 end

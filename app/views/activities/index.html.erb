@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="bg-img">
+    <div class="col-md-2" align="center">
+      <br>
+      <%= gravatar_for @user, size: Settings.user.gravantar_size150 %>
+      <br><br>
+      <table class="table">
+        <%= render "users/summary", user: @user %>
+      </table>
+    </div>
+    <div class="col-md-10">
+      <br><br><br><br><br>
+      <%= render "users/header", user: @user %>
+      <h3><%= t "activities.title" %></h3><hr>
+      <%= render @activities %>
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>
