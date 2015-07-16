@@ -8,7 +8,7 @@
   <th><%= t "user.comments", count: user.comments.count %></th>
 </tr>
 <tr>
-  <th><%= t "user.activities", count: user.activities.count %></th>
+  <th><%= link_to (t "user.activities", count: user.activities.count), activities_path(user_id: user.id) %></th>
 </tr>
 <tr>
   <th><%= t "user.requests", count: user.requests.count %></th>

@@ -30,6 +30,7 @@ User.all.each do |user|
   @books = Book.order("random()").limit(10)
   @books.all.each do |book|
     user.add_favorite(book)
+    Activity.create!(user_id: user.id, action: "favorite|" + book.id.to_s)
   end
 end
 

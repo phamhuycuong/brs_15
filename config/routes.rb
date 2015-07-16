@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root "static_pages#home"
 
+  get "home" => "activities#index"
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
 
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   resources :favorites, only: [:index, :create, :destroy]
   resources :readings, only: [:create, :update, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :activities, only: [:index]
+  resources :likes, only: [:create, :destroy]
 
   get "/users/:id/:type" => "relationships#index", as: "follow"
 

@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
                        dependent: :destroy
   has_many :favorited_books, through: :favorites, source: :book
   has_many :reading_books, through: :readings, source: :book
+  has_many :liked_activites, through: :likes, source: :activity
 
   def set_default_role
     self.role ||= :normal
@@ -53,5 +54,9 @@ class User < ActiveRecord::Base
 
   def following? other_user
     following.include? other_user
+  end
+
+  def liked_activity activity
+    self.liked_activites.include? activity
   end
 end

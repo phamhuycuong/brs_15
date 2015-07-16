@@ -5,6 +5,6 @@ class Comment < ActiveRecord::Base
   after_create :activity_comment
 
   def activity_comment
-    Activity.create! action: "comment|#{self.review.id}|", user_id: self.user.id
+    Activity.create! action: "comment|#{self.id}|", user_id: self.user.id
   end
 end
