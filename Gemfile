@@ -26,6 +26,8 @@ gem "whenever", require: false
 gem "sidekiq"
 gem "delayed_job_active_record"
 gem "daemons"
+gem "rspec-rails", "~> 3.0.0"
+gem "factory_girl_rails"
 
 group :development, :test do
   gem "byebug"

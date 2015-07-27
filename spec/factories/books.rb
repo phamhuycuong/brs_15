@@ -6,5 +6,6 @@ FactoryGirl.define do
     author
     publish_date "2015-05-05"
     number_page 10
+    to_create {|instance| instance.save(validate: false) }
   end
 end
